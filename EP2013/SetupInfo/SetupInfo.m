@@ -71,7 +71,7 @@ static CGFloat _frameRateInHz = 60.0f;
         } while ((!found) && (jumpAboveString.length < 3*10));	// allow maximal indirection of 10 folders
 		
 		if (!found) {
-			[setupInfoFolderPath setString:@"/Users/bach/Documents/Bach/EDIAG/EDV/EP2010/zEP2010-Development/EP2010-Source/EP2010SetupInfo/SetupInfo.plist"];
+			[setupInfoFolderPath setString:@"/Users/bach/Documents/Bach/EDIAG/EDV/EP2013/EP2010SetupInfo/SetupInfo.plist"];
 			found = [fileManager fileExistsAtPath: setupInfoFolderPath];
 		}
 

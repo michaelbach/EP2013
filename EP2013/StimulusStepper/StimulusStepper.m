@@ -391,7 +391,7 @@ static CVReturn myDisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTime
 		} while ((!found) && (jumpAboveString.length < 3*10));	// allow maximal indirection of 10 folders
 
 		if (!found) {
-			[stimulusFolderPath setString:@"/Users/bach/Documents/Bach/EDIAG/EDV/EP2010/zEP2010-Development/EP2010-Source/EP2010Stimuli/"];
+			[stimulusFolderPath setString:@"/Users/bach/Documents/Bach/EDIAG/EDV/EP2013/EP2010Stimuli/"];
 			found = [fileManager fileExistsAtPath: stimulusFolderPath];
 		}
 		

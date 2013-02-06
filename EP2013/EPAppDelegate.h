@@ -9,14 +9,24 @@
 History
 =======
 
+2012-07-25 saveAverages: Added a for-loop to save the sweeps for each stimageSequence
+	some changes to store combination names, sequence names, stimage names etc.
+2012-07-24 updateAverages shows averaged sweeps for current stimageSequence
+2012-07-23 New notifications to update user interface (currentCombinationRepeatCounter,
+	currentSequence, combinationRepeatCounterMax, etc.
+	popupEyes and popupPositions get their defauls values from SetupInfo.pList file
 2012-07-23 currentCombinationRepeatCounter, currentSequence, combinationRepeatCounterMax
-added to interact with modified user interface.
+	added to interact with modified user interface.
 2012-05-15 change from "popupSequence_outlet" to "popupSequenceCombination_outlet"
 2012-02-29	added stuff on the eye and position buttons (not saved yet)
 2012-02-28	added many saving details
 2012-01-03	added averaging indicator
 2011-12-27	made "numberOfChannels" global (–> gNumberOfChannels)
 
+ 
+ 
+
+ 
 
 */
 

@@ -2,12 +2,6 @@
 //  EPAppDelegate.m
 //  EP2013
 //
-//  2012-07-25 saveAverages: Added a for-loop to save the sweeps for each stimageSequence
-//             some changes to store combination names, sequence names, stimage names etc.
-//  2012-07-24 updateAverages shows averaged sweeps for current stimageSequence
-//  2012-07-23 New notifications to update user interface (currentCombinationRepeatCounter,
-//              currentSequence, combinationRepeatCounterMax, etc.
-//              popupEyes and popupPositions get their defauls values from SetupInfo.pList file
 //  Created by bach on 13.01.10.
 //  Copyright 2010 Universitäts-Augenklinik. All rights reserved.
 //

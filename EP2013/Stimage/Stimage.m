@@ -89,7 +89,8 @@ static GLfloat screenWidthInDegrees, screenHeigtInDegrees, screenLeftInDegrees, 
 	glLineWidth(n);  glEnable(GL_LINE_STIPPLE);  
 	GLfloat yInc = [SetupInfo pixels2Degrees:n], xLeft = -screenWidthInDegrees/2, xRight = xLeft + screenWidthInDegrees;
 	NSUInteger oddCounter=0;
-	for (GLfloat y = -screenHeigtInDegrees/2; y < screenHeigtInDegrees/2; y += yInc) {
+	GLfloat screenHeightHalf = screenHeigtInDegrees/2;
+	for (GLfloat y = -screenHeightHalf; y < screenHeightHalf; y += yInc) {
 		glLineStipple(n, (topLeftHasForeColor ^ (++oddCounter & 0x01))? 0x5555 : 0xAAAA);
 		glBegin(GL_LINES);  glVertex2f(xLeft, y);  glVertex2f(xRight, y);  glEnd();
 	}
