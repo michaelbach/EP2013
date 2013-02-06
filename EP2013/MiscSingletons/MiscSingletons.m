@@ -1,6 +1,6 @@
 //
 //  MiscSingletons.m
-//  EP2010
+//  EP2013
 //
 //  2012-07-09  dictFromPListFileArray, objectFromDict, floatFromDict: 
 //              Newly created to derive parameters from Array of pList-Files (SetupInfo, StimulusSteppers) TM
@@ -28,7 +28,7 @@
 	NSMutableString *stimulusFolderPath = [NSMutableString stringWithCapacity: 50];
 
 	BOOL found = NO;
-	do {	// find the folder "EP2010Stimuli" upwards of this application
+	do {	// find the folder "EP2013Stimuli" upwards of this application
 		[stimulusFolderPath appendFormat: @"%@/%@%@", appPath, jumpAboveString, @"EP2013Stimuli/"];
 		found = [fileManager fileExistsAtPath: stimulusFolderPath];
 		[jumpAboveString appendString: @"../"];
@@ -48,7 +48,7 @@
 	NSMutableString *jumpAboveString = [NSMutableString stringWithCapacity: 20];
 	NSMutableString *setupInfoPath = [NSMutableString stringWithCapacity: 50];
 	BOOL found = NO;
-	do {	// find the folder "EP2010SetupInfo" upwards of this application
+	do {	// find the folder "EP2013SetupInfo" upwards of this application
 		[setupInfoPath appendFormat: @"%@/%@%@", appPath, jumpAboveString, @"EP2013SetupInfo/SetupInfo.plist"];
 		found = [fileManager fileExistsAtPath: setupInfoPath];
 		[jumpAboveString appendString: @"../"];
@@ -63,7 +63,7 @@
 
 
 
-+ (NSString *) pathToEPFileGivenEPNum: (int) epNum {
++ (NSString *) path2EPFileGivenEPNum: (int) epNum {
 	// the EPNum ist preceded by leading zeros up to a length of 5: "EP00123.itx"
 	return [[self path2ApplicationContainer] stringByAppendingPathComponent: [NSString stringWithFormat: @"ERG%05u.itx", epNum]];
 }

@@ -1,6 +1,6 @@
 //
 //  Image4Stim.m
-//  EP2010
+//  EP2013
 //
 //  Created by bach on 2011-10-31.
 //  Copyright 2011 Universitäts-Augenklinik. All rights reserved.

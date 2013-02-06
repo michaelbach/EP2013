@@ -1,6 +1,6 @@
 //
 //  MiscSingletons.h
-//  EP2010
+//  EP2013
 //
 //  2012-07-23  composeWaveNameFromBlockNum changed: "andSequenceNum"
 //  2012-07-09  dictFromPListFileArray, objectFromDict, floatFromDict: 
@@ -18,8 +18,8 @@
 + (NSString *) path2ApplicationContainer;
 + (NSString *) path2StimuliFolder;
 + (NSString *) path2SetupInfoPList;
++ (NSString *) path2EPFileGivenEPNum: (int) epNum;
 
-+ (NSString *) pathToEPFileGivenEPNum: (int) epNum;
 + (NSString *) date2YYYY_MM_DD: (NSDate *) theDate;
 + (NSString *) date2HH_MM_SS: (NSDate *) theDate;
 

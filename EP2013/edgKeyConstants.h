@@ -1,6 +1,6 @@
 /*
 edgKeyConstants.h
-EP2010 & ERG2007
+EP2013 & ERG2007
 
 Copyright 2009–2011 Prof. Michael Bach. All rights reserved.
  

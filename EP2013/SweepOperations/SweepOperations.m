@@ -1,6 +1,6 @@
 //
 //  SweepOperations.m
-//  EP2010
+//  EP2013
 //
 //  2012-07-24 Added "forStimageSequence" to "averageFromBufferNumber". The last raw data 
 //              is averaged to the correct sweep.
@@ -35,7 +35,7 @@
 }
 
 
-+ (void) averageFromBufferNumber: (NSUInteger) bufferNumber forStimageSequence: (NSUInteger) iSequence {
++ (void) averageBufferNumber: (NSUInteger) bufferNumber forStimageSequence: (NSUInteger) iSequence {
 	//[absTime reset];
 	for (NSUInteger iChannel = 0; iChannel < gNumberOfChannels; ++iChannel) {
 		for (NSUInteger sampleIndex = 0; sampleIndex<[Interrupt1kHz samplesPerSweep]; ++sampleIndex) {	// averaging

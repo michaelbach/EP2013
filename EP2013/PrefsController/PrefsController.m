@@ -39,7 +39,7 @@
 }
 
 
-- (void) setEpNumber: (NSUInteger) theValue { // NSLog(@"EP2010>PrefsController>setEpNumber: %i\n", theValue);
+- (void) setEpNumber: (NSUInteger) theValue { // NSLog(@"EP2013>PrefsController>setEpNumber: %i\n", theValue);
 	[[NSUserDefaults standardUserDefaults] setInteger:theValue forKey: @kKeyEPNumber];
 }
 - (NSUInteger) epNumber { //	NSLog(@"%s", __PRETTY_FUNCTION__);

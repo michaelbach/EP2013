@@ -1,6 +1,6 @@
 //
 //  SequenceCombination.h
-//  EP2010
+//  EP2013
 //
 //  Created by Thomas Meigen on 24.07.12.
 //  Copyright (c) 2012 Univ.-Augenklinik Würzburg. All rights reserved.
@@ -10,17 +10,9 @@
 #import "StimageSequence.h"
 
 @interface SequenceCombination : NSObject {
-    
     NSString* combinationName;
-    
-    NSMutableArray* eyeArray;
-    NSMutableArray* positionArray;
-
-    NSMutableArray* sequenceArray;
     NSUInteger sequenceCounterMax;
-    
 	NSUInteger combinationRepeatCounterMax;
-    
     NSUInteger channelCounterMax;
  
 }
@@ -41,9 +33,7 @@
 - (void) addPosition:(NSString *) sPosition;
 - (NSString*) getPositionForChannel:(NSUInteger) iChannel;
 - (void) addSequence: (StimageSequence*) theSequence;
-
 - (StimageSequence*) sequenceAtIndex:(NSUInteger) index;
-
 
 
 @end

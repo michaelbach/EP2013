@@ -1,6 +1,6 @@
 //
 //  StimageSequence.m
-//  EP2010
+//  EP2013
 //
 //  Created by Thomas Meigen on 23.07.12.
 //  Copyright (c) 2012 Univ.-Augenklinik Würzburg. All rights reserved.
@@ -11,6 +11,9 @@
 
 
 @implementation StimageSequence
+
+static NSMutableArray* stimageArray;
+
 
 @synthesize sequenceName, sequenceDetails, stimageCounterMax, sequenceRepeatCounterPre,sequenceRepeatCounterMax;
 

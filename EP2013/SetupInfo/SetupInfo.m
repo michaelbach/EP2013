@@ -1,9 +1,9 @@
 //
 //  SetupInfo.m
-//  EP2010
+//  EP2013
 //
 //
-//  2012-07-10 Read general setup information from "EP2010SetupInfo/SetupInfo.plist" (in "initialize")
+//  2012-07-10 Read general setup information from "EP2013SetupInfo/SetupInfo.plist" (in "initialize")
 //  Created by bach on 2011-10-31.
 //  Copyright 2011 Universitäts-Augenklinik. All rights reserved.
 //
@@ -86,7 +86,7 @@ static CGFloat _frameRateInHz = 60.0f;
                }
            }
        } else {
-           NSRunAlertPanel(@"SetupInfo file not found. Filename:", @"EP2010SetupInfo/SetupInfo.plist", @"Ok", nil, nil);
+           NSRunAlertPanel(@"SetupInfo file not found. Filename:", @"EP2013SetupInfo/SetupInfo.plist", @"Ok", nil, nil);
        }
 	   [SetupInfo recalculate];
 	}
@@ -153,20 +153,17 @@ static CGFloat _frameRateInHz = 60.0f;
 + (GLfloat) screenBottomInDegrees {return _screenBottomInDegrees;}
 
 
-
 + (GLfloat) pixels2Degrees: (GLfloat) pixels {
 	return (pixels * 180.0 / M_PI * atan(_screenWidthInCentimeters / _screenEyeDistanceInCentimeters) / _screenWidthInPixels);
 }
 
 // calculate pixels from degrees, but clamp to 1 or more pixels
 + (GLfloat) degrees2Pixels: (GLfloat) deg {
-	NSInteger i = round(deg / [SetupInfo pixels2Degrees: 1.0]);
-	if (i<1) return 1; else return i;
+	return fmax(1.0f, deg / [SetupInfo pixels2Degrees: 1.0]);
 }
 
 
 + (GLfloat) pixelSizeInDegrees {return [SetupInfo pixels2Degrees: 1.0];}
-
 
 
 + (GLfloat) maxLuminance {return _maxLuminance;}

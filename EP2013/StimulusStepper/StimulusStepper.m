@@ -11,7 +11,7 @@
 //                  sequenceCombination -> stimageSequences -> Stimages is initialized
 //            retraceHandler:
 //                  The structure sequenceCombination -> stimageSequences -> Stimages is
-//                  used to generate the stimuli and to send notifications to EP2010AppDelegate
+//                  used to generate the stimuli and to send notifications to EP2013AppDelegate
 //  2012-05-15  Changes:
 //              - selectedSequenceIndex -> selectedSequenceCombinationIndex
 //              - selectSequenceNo -> selectSequenceCombinationNo
@@ -377,7 +377,7 @@ static CVReturn myDisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTime
 	allSequenceCombinationsNames = [[NSMutableArray arrayWithCapacity: 10] retain];
 	allSequenceCombinationsDicts = [[NSMutableArray arrayWithCapacity: 5] retain];
 	if ((self = [super init])) {
-/*      Search for all pList-Files with an array of stimulus dictionaries. The pList-File must be in a directory "EP2010stimuli" upwards of this application*/
+/*      Search for all pList-Files with an array of stimulus dictionaries. The pList-File must be in a directory "EP2013stimuli" upwards of this application*/
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		NSMutableString *stimulusFolderPath = [NSMutableString stringWithString: [MiscSingletons path2StimuliFolder]];
 		if ([stimulusFolderPath length]>1) {	// we have found it, now look inside for *.plist files
@@ -465,14 +465,14 @@ static CVReturn myDisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTime
 		[Interrupt1kHz setSampleIndex: -1];
 		[Interrupt1kHz numberOfArtifactsReset];
 		NSUInteger oldBufferNumber = [Interrupt1kHz bufferNumber];
-		[Interrupt1kHz toggleBuffer];
+		[Interrupt1kHz bufferToggle];
 		if (gSweepsRaw[oldBufferNumber].isArtifact) {
 			NSLog(@"ARTIFACT");
             dispatch_async(queue4Averaging, ^{[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName: @"incrementArtifactCountNotification" object: self]];});
 			return;
 		}
 		dispatch_async(queue4Averaging, ^{
-				[SweepOperations averageFromBufferNumber: oldBufferNumber forStimageSequence:sequenceCounter];
+				[SweepOperations averageBufferNumber: oldBufferNumber forStimageSequence:sequenceCounter];
 				if (gSweepsAveraged[sequenceCounter].nAverages > 1) {
 					NSDictionary* sequenceDict = [NSDictionary dictionaryWithObject: [NSNumber numberWithInt:sequenceCounter] forKey:@"sequenceCounter"];
 					[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName: @"averagingDoneNotification" object: self userInfo:sequenceDict]];

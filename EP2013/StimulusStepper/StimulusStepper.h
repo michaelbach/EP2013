@@ -53,27 +53,19 @@
 @end
 
 
-
 @interface StimulusStepper : NSObject {
     NSMutableArray* allSequenceCombinationsNames;
     NSMutableArray* allSequenceCombinationsDicts;
-
     NSUInteger combinationCounterMax;
     NSUInteger selectedSequenceCombination;
- 
-    
 	id _delegate4StimRenderingStimulator, _delegate4StimRenderingEcho;
 }
 
 
 @property (assign) id delegate4StimRenderingStimulator, delegate4StimRenderingEcho;
-
-
 @property (readonly) NSUInteger combinationCounterMax;
-
-
 @property (assign) NSUInteger selectedSequenceCombination;
-
+@property (readonly) GLfloat videoRefreshPeriod;
 
 - (void) selectSequenceCombination: (NSUInteger) iSeq;
 - (NSString*) combinationName;
@@ -97,7 +89,6 @@
 
 - (void) suspendGDCTasks;
 
-@property (readonly) GLfloat videoRefreshPeriod;
 
 
 @end

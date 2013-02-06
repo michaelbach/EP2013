@@ -1,6 +1,6 @@
 //
 //  SetupInfo.h
-//  EP2010
+//  EP2013
 //
 //  Created by bach on 2011-10-31.
 //  Copyright 2011 Universitäts-Augenklinik. All rights reserved.
@@ -24,7 +24,7 @@
 + (NSUInteger) screenWidthInPixels;
 + (NSUInteger) screenHeightInPixels;
 
-	+ (GLfloat) screenWidthInCentimeters;
++ (GLfloat) screenWidthInCentimeters;
 + (void) setScreenWidthInCentimeters: (GLfloat) v;
 
 //+ (GLfloat) screenHeightInCentimeters;
@@ -33,11 +33,9 @@
 + (GLfloat) screenEyeDistanceInCentimeters;
 + (void) setScreenEyeDistanceInCentimeters: (GLfloat) v;
 
-+ (GLfloat) pixelSizeInDegrees;
 
 + (GLfloat) screenWidthInDegrees;
 + (GLfloat) screenHeightInDegrees;
-
 
 + (GLfloat) screenRightInDegrees;
 + (GLfloat) screenLeftInDegrees;
@@ -46,6 +44,7 @@
 + (GLfloat) screenBottomInDegrees;
 
 
++ (GLfloat) pixelSizeInDegrees;
 + (GLfloat) pixels2Degrees: (GLfloat) pixels;
 + (GLfloat) degrees2Pixels: (GLfloat) deg; // calculate pixels from degrees, but clamp to 1 or more pixels
 

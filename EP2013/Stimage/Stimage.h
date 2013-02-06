@@ -1,6 +1,6 @@
 /*
 //  Image4Stim.h
-//  EP2010
+//  EP2013
 //
 //  2012-05-15 Change: durationInFrames -> frameCounterMax (see nomenclature in StimulusStepper)
 //  Created by bach on 2011-10-31.

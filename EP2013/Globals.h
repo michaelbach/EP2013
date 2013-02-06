@@ -1,6 +1,6 @@
 /*
 Globals.h
-EP2010
+EP2013
 
 Copyright 2009–2012 Prof. Michael Bach. All rights reserved.
  

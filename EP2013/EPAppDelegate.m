@@ -31,8 +31,8 @@ static NSArray *popupEyes, *popupPositions;
 static NSUInteger _numberOfChannelsMax;
 static NSWindow *stimScreenWindow;
 
-@synthesize operatorWindow;
 
+@synthesize operatorWindow;
 
 
 - (NSUInteger) numberOfChannels {
@@ -50,7 +50,6 @@ static NSWindow *stimScreenWindow;
 	}
 }
 - (IBAction) popupNumberOfChannels_action:(id)sender {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
-#pragma unused (sender)
 	[self setNumberOfChannels: [sender indexOfSelectedItem]+1];
 }
 
@@ -67,6 +66,7 @@ static NSWindow *stimScreenWindow;
 @synthesize currentSweep;
 @synthesize currentArtifacts;
 @synthesize combinationRepeatCounterMax;
+
 
 - (void) indicateRecording: (BOOL) b {
 	static BOOL oldB = NO;  if (b == oldB) return;  oldB = b;
@@ -89,7 +89,6 @@ static NSWindow *stimScreenWindow;
 ////////////////////////////////////////////////////////////////////////////////////
 //// notification handlers
 - (void) updateAverages:(NSNotification *)aNotification {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
-#pragma unused (aNotification)
     NSDictionary *dict = [aNotification userInfo];
     NSUInteger sequenceCounter = [[dict objectForKey:@"sequenceCounter"] intValue];
 	
@@ -120,95 +119,56 @@ static NSWindow *stimScreenWindow;
 
 
 - (void) setCombinationRepeatCounterNotification:(NSNotification *)aNotification {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
-#pragma unused (aNotification)
-    NSDictionary *dict = [aNotification userInfo];
-    [self setCurrentCombinationRepeatCounter: [[dict objectForKey:@"combinationRepeatCounter"] intValue]];
+    [self setCurrentCombinationRepeatCounter: [[[aNotification userInfo] objectForKey:@"combinationRepeatCounter"] intValue]];
 }
 
 - (void) setSequenceCounterNotification:(NSNotification *)aNotification  {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
-#pragma unused (aNotification)
-    NSDictionary *dict = [aNotification userInfo];
-    [self setCurrentSequence: [[dict objectForKey:@"sequenceCounter"] intValue]];
+    [self setCurrentSequence: [[[aNotification userInfo] objectForKey:@"sequenceCounter"] intValue]];
 }
-
 
 - (void) setSweepCounterNotification:(NSNotification *)aNotification  {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
-#pragma unused (aNotification)
-    NSDictionary *dict = [aNotification userInfo];
-    [self setCurrentSweep: [[dict objectForKey:@"sweepCounter"] intValue]];
+    [self setCurrentSweep: [[[aNotification userInfo] objectForKey:@"sweepCounter"] intValue]];
 }
 
-
 - (void) setArtifactCounterNotification:(NSNotification *)aNotification {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
-#pragma unused (aNotification)
-    NSDictionary *dict = [aNotification userInfo];
-    [self setCurrentArtifacts: [[dict objectForKey:@"artifactCounter"] intValue]];
+    [self setCurrentArtifacts: [[[aNotification userInfo] objectForKey:@"artifactCounter"] intValue]];
 }
 
 - (void) setNumberOfChannelsNotification:(NSNotification *)aNotification {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
-#pragma unused (aNotification)
-    NSDictionary *dict = [aNotification userInfo];
-    [self setNumberOfChannels: [[dict objectForKey:@"nChannels"] intValue]];
+    [self setNumberOfChannels: [[[aNotification userInfo] objectForKey:@"nChannels"] intValue]];
 }
+
 
 - (void) setPositionNotification:(NSNotification *)aNotification {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
-#pragma unused (aNotification)
     NSDictionary *dict = [aNotification userInfo];
-    NSInteger iChannel = [[dict objectForKey:@"channel"] intValue];
-    switch (iChannel) {
-        case 0:
-            [popupPos00_outlet selectItemWithTitle:[dict objectForKey:@"position"]];
-            break;
-        case 1:
-            [popupPos01_outlet selectItemWithTitle:[dict objectForKey:@"position"]];
-            break;
-        case 2:
-            [popupPos02_outlet selectItemWithTitle:[dict objectForKey:@"position"]];
-            break;
-        case 3:
-            [popupPos03_outlet selectItemWithTitle:[dict objectForKey:@"position"]];
-            break;
-        case 4:
-            [popupPos04_outlet selectItemWithTitle:[dict objectForKey:@"position"]];
-            break;
-            
-        default:
-            break;
+	NSString *sPosition = [dict objectForKey:@"position"];
+    switch ([[dict objectForKey:@"channel"] intValue]) {
+        case 0: [popupPos00_outlet selectItemWithTitle: sPosition];  break;
+        case 1: [popupPos01_outlet selectItemWithTitle: sPosition];  break;
+        case 2: [popupPos02_outlet selectItemWithTitle: sPosition];  break;
+        case 3: [popupPos03_outlet selectItemWithTitle: sPosition];  break;
+        case 4: [popupPos04_outlet selectItemWithTitle: sPosition];  break;
     }
 }
+
 
 - (void) setEyeNotification:(NSNotification *)aNotification {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
-#pragma unused (aNotification)
     NSDictionary *dict = [aNotification userInfo];
-    NSInteger iChannel = [[dict objectForKey:@"channel"] intValue];
-    switch (iChannel) {
-        case 0:
-            [popupEye00_outlet selectItemWithTitle:[dict objectForKey:@"eye"]];
-            break;
-        case 1:
-            [popupEye01_outlet selectItemWithTitle:[dict objectForKey:@"eye"]];
-            break;
-        case 2:
-            [popupEye02_outlet selectItemWithTitle:[dict objectForKey:@"eye"]];
-            break;
-        case 3:
-            [popupEye03_outlet selectItemWithTitle:[dict objectForKey:@"eye"]];
-            break;
-        case 4:
-            [popupEye04_outlet selectItemWithTitle:[dict objectForKey:@"eye"]];
-            break;
-            
-        default:
-            break;
+	NSString *sEye = [dict objectForKey:@"eye"];
+	switch ([[dict objectForKey:@"channel"] intValue]) {
+        case 0: [popupEye00_outlet selectItemWithTitle: sEye];  break;
+        case 1: [popupEye01_outlet selectItemWithTitle: sEye];  break;
+        case 2: [popupEye02_outlet selectItemWithTitle: sEye];  break;
+        case 3: [popupEye03_outlet selectItemWithTitle: sEye];  break;
+        case 4: [popupEye04_outlet selectItemWithTitle: sEye];  break;
     }
 }
 
+
 - (void) setScreenEyeDistanceNotification:(NSNotification *)aNotification {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
-#pragma unused (aNotification)
-    NSDictionary *dict = [aNotification userInfo];
-    NSInteger eyeDistance = [[dict objectForKey:@"screenEyeDistance"] intValue];
-    [ScreenEyeDistance_outlet setTitle:[NSString stringWithFormat:@"Screen eye distance %dcm",eyeDistance]];
+    [ScreenEyeDistance_outlet setTitle:[NSString stringWithFormat:@"Screen eye distance %dcm", [[[aNotification userInfo] objectForKey:@"screenEyeDistance"] intValue]]];
 }
+
 
 - (void) setCombinationRepeatCounterMaxNotification:(NSNotification *)aNotification {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
 #pragma unused (aNotification)
@@ -216,8 +176,6 @@ static NSWindow *stimScreenWindow;
     NSInteger counter = [[dict objectForKey:@"combinationRepeatCounterMax"] intValue];
     [self setCombinationRepeatCounterMax:counter];
 }
-
-
 
 
 - (void) timerOsciHandler: (NSTimer *) timer {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
@@ -234,7 +192,7 @@ static NSWindow *stimScreenWindow;
 ////////////////////////////////////////////////////////////////////////////////////
 - (void) awakeFromNib {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
 	[operatorWindow setBackgroundColor: [NSColor colorWithDeviceWhite: (CGFloat)0.25 alpha: 1]];
-	[operatorWindow setTitle: [NSString stringWithFormat: @"EP2010  (vs %s)", kCurrentVersionDate]];
+	[operatorWindow setTitle: [NSString stringWithFormat: @"EP2013  (vs %s)", kCurrentVersionDate]];
 	[operatorWindow setFrameTopLeftPoint: NSMakePoint(0, CGDisplayPixelsHigh([SetupInfo displayID4operator])-22)];
 	
 	popupEyes = [NSArray arrayWithObjects: popupEye00_outlet, popupEye01_outlet, popupEye02_outlet, popupEye03_outlet, popupEye04_outlet, nil];
@@ -350,10 +308,12 @@ static NSWindow *stimScreenWindow;
 	return YES;
 }
 
+
 - (NSApplicationTerminateReply) applicationShouldTerminate:(NSApplication *)theApplication {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
 #pragma unused (theApplication)
 	return YES;
 }
+
 
 - (BOOL) acceptsFirstResponder { return YES; }
 
@@ -366,10 +326,10 @@ static NSWindow *stimScreenWindow;
 	[stimStepper selectSequenceCombination: [popupSequenceCombination_outlet indexOfSelectedItem]];
 }
 
+
 - (void) buttonRecord_action: (id)sender {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
 #pragma unused(sender)
 	[SweepOperations clearAll];
-    
     [self updateAverages: nil];
 	[SetupInfo recalculate];
 	[SetupInfo setFrameRateInHz: 1.0 / [stimStepper videoRefreshPeriod]];//	NSLog(@"SetupInfo frameRateInHz: %f", [SetupInfo frameRateInHz]);
@@ -380,8 +340,6 @@ static NSWindow *stimScreenWindow;
 	[stimStepper selectSequenceCombination: [popupSequenceCombination_outlet indexOfSelectedItem]];
 	[stimStepper sequenceCombinationStart];
 }
-
-
 
 
 - (IBAction) buttonInput_action: (id) sender {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
@@ -396,18 +354,16 @@ static NSWindow *stimScreenWindow;
 }
 
 
-
 ////////////////////////////////////////////////////////////////////////////////////
 // Saving
 ////////////////////////////////////////////////////////////////////////////////////
 - (void) saveAverages {	//	NSLog(@"%s", __PRETTY_FUNCTION__);
 	NSInteger epNum = [fieldEpNum_outlet integerValue];
-	NSMutableString *fileString = [NSMutableString stringWithContentsOfFile: [MiscSingletons pathToEPFileGivenEPNum: epNum] encoding:NSMacOSRomanStringEncoding error: NULL];
+	NSMutableString *fileString = [NSMutableString stringWithContentsOfFile: [MiscSingletons path2EPFileGivenEPNum: epNum] encoding:NSMacOSRomanStringEncoding error: NULL];
 	if (fileString.length <1) {
 		fileString = [NSMutableString stringWithCapacity: 10000]; [fileString appendString: @"IGOR\n"];
 	}
 	NSUInteger blockNum = [MiscSingletons blockNumberFromChar: [[fieldBlockNum_outlet stringValue] characterAtIndex:0]];//	NSLog(@"saveTraces, block: %d", blockNum);
-    
     
     for (NSUInteger iStimageSequence = 0; iStimageSequence < [stimStepper getSequenceCounterMax]; ++iStimageSequence) {
 		
@@ -486,14 +442,13 @@ static NSWindow *stimScreenWindow;
         [fileString appendString: @"\n\n"];
     }
     
-	
-	NSString *path = [NSString stringWithString: [MiscSingletons pathToEPFileGivenEPNum: epNum]];
-	BOOL result = [fileString writeToFile: path atomically: YES encoding: NSMacOSRomanStringEncoding error: NULL];
+	BOOL result = [fileString writeToFile: [NSString stringWithString: [MiscSingletons path2EPFileGivenEPNum: epNum]] atomically: YES encoding: NSMacOSRomanStringEncoding error: NULL];
 	if (!result)
 		NSRunAlertPanel(@"Alert:", @"Recording could not be written to disk.", @"OK", NULL, NULL);
 	[prefsController setEpNumber: [fieldEpNum_outlet integerValue]];
 	[prefsController setBlockNumber: [MiscSingletons blockNumberFromChar: [[fieldBlockNum_outlet stringValue] characterAtIndex:0]]];
 }
+
 
 - (void)dealloc {
     [super dealloc];

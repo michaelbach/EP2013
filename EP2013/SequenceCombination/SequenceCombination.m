@@ -1,6 +1,6 @@
 //
 //  SequenceCombination.m
-//  EP2010
+//  EP2013
 //
 //  Created by Thomas Meigen on 24.07.12.
 //  Copyright (c) 2012 Univ.-Augenklinik Würzburg. All rights reserved.
@@ -9,7 +9,13 @@
 #import "StimageSequence.h"
 #import "SequenceCombination.h"
 
+
+
 @implementation SequenceCombination
+
+static NSMutableArray* eyeArray;
+static NSMutableArray* positionArray;
+static NSMutableArray* sequenceArray;
 
 
 @synthesize combinationName, sequenceCounterMax,combinationRepeatCounterMax, channelCounterMax;
