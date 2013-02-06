@@ -15,7 +15,9 @@
 @interface MiscSingletons : NSObject
 
 
-+ (NSString *) pathOfApplicationContainer;
++ (NSString *) path2ApplicationContainer;
++ (NSString *) path2StimuliFolder;
++ (NSString *) path2SetupInfoPList;
 
 + (NSString *) pathToEPFileGivenEPNum: (int) epNum;
 + (NSString *) date2YYYY_MM_DD: (NSDate *) theDate;

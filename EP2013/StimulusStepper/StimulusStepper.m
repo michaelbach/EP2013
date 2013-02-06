@@ -379,23 +379,8 @@ static CVReturn myDisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTime
 	if ((self = [super init])) {
 /*      Search for all pList-Files with an array of stimulus dictionaries. The pList-File must be in a directory "EP2010stimuli" upwards of this application*/
 		NSFileManager *fileManager = [NSFileManager defaultManager];
-		NSString *appPath = [MiscSingletons pathOfApplicationContainer];
-		NSMutableString *jumpAboveString = [NSMutableString stringWithCapacity: 20];
-		NSMutableString *stimulusFolderPath = [NSMutableString stringWithCapacity: 50];
-		
-		BOOL found = NO;
-		do {	// find the folder "EP2010Stimuli" upwards of this application
-			[stimulusFolderPath appendFormat: @"%@/%@%@", appPath, jumpAboveString, @"EP2010Stimuli/"];
-			found = [fileManager fileExistsAtPath: stimulusFolderPath];
-			[jumpAboveString appendString: @"../"];
-		} while ((!found) && (jumpAboveString.length < 3*10));	// allow maximal indirection of 10 folders
-
-		if (!found) {
-			[stimulusFolderPath setString:@"/Users/bach/Documents/Bach/EDIAG/EDV/EP2013/EP2010Stimuli/"];
-			found = [fileManager fileExistsAtPath: stimulusFolderPath];
-		}
-		
-		if (found) {	// we have found it, now look inside for *.plist files
+		NSMutableString *stimulusFolderPath = [NSMutableString stringWithString: [MiscSingletons path2StimuliFolder]];
+		if ([stimulusFolderPath length]>1) {	// we have found it, now look inside for *.plist files
 			NSArray *folderContents = [NSArray arrayWithArray: [fileManager contentsOfDirectoryAtPath:stimulusFolderPath error: nil]];
 			for (NSString *aFileName in folderContents) {
 				if ([[aFileName pathExtension] isEqualToString: @"plist"]) {	// it's a plist file, so let's assume it is an array of stimulus dictionaries

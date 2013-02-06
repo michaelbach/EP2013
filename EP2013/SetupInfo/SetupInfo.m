@@ -55,30 +55,11 @@ static CGFloat _frameRateInHz = 60.0f;
 		}
 		//	NSLog(@"numberOfDisplays: %d, displayID4operator: %d, displayID4stimulator: %d", _numDisplays, _displayID4operator, _displayID4stimulator);
 
-		
-        // Search for SetupInfo.pList file for general setup information
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        NSString *appPath = [MiscSingletons pathOfApplicationContainer];
-        NSMutableString *jumpAboveString = [NSMutableString stringWithCapacity: 20];
-        NSMutableString *setupInfoFolderPath;// = [NSMutableString stringWithCapacity: 50];
- 
-        BOOL found = NO;
-        do {	// find the folder "EP2010SetupInfo" upwards of this application
-            setupInfoFolderPath = [NSMutableString stringWithCapacity: 50];
-            [setupInfoFolderPath appendFormat: @"%@/%@%@", appPath, jumpAboveString, @"EP2010SetupInfo/SetupInfo.plist"];
-            found = [fileManager fileExistsAtPath: setupInfoFolderPath];
-            [jumpAboveString appendString: @"../"];
-        } while ((!found) && (jumpAboveString.length < 3*10));	// allow maximal indirection of 10 folders
-		
-		if (!found) {
-			[setupInfoFolderPath setString:@"/Users/bach/Documents/Bach/EDIAG/EDV/EP2013/EP2010SetupInfo/SetupInfo.plist"];
-			found = [fileManager fileExistsAtPath: setupInfoFolderPath];
-		}
-
-       if (found) {	// we have found it, now we load the SetupInfo.plist file
-           NSDictionary *dict=[[NSArray arrayWithContentsOfFile:setupInfoFolderPath] objectAtIndex:0];
-             _screenWidthInCentimeters = [MiscSingletons floatFromDict:dict forKey:@"screenWidthInCentimeters"];
-            _maxLuminance = [MiscSingletons floatFromDict:dict forKey:@"maxLuminance"];
+		NSMutableString *setupInfoFolderPath = [NSMutableString stringWithString: [MiscSingletons path2SetupInfoPList]];
+		if ([setupInfoFolderPath length]>1) {	// we have found it, now we load the SetupInfo.plist file
+		   NSDictionary *dict=[[NSArray arrayWithContentsOfFile:setupInfoFolderPath] objectAtIndex:0];
+           _screenWidthInCentimeters = [MiscSingletons floatFromDict:dict forKey:@"screenWidthInCentimeters"];
+           _maxLuminance = [MiscSingletons floatFromDict:dict forKey:@"maxLuminance"];
            
            NSArray *myArray;
            myArray = (NSArray*)[MiscSingletons objectFromDict:dict forKey:@"eyeArray"];
