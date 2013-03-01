@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A3E127216C23CBB0027EEFC /* MiscSingletons.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E127116C23CBB0027EEFC /* MiscSingletons.m */; };
+		8A3E129116C23CFA0027EEFC /* GLString.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E127716C23CFA0027EEFC /* GLString.m */; };
+		8A3E129216C23CFA0027EEFC /* OGLTargetEcho.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E127916C23CFA0027EEFC /* OGLTargetEcho.m */; };
+		8A3E129316C23CFA0027EEFC /* OGLTargetMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E127B16C23CFA0027EEFC /* OGLTargetMain.m */; };
+		8A3E129416C23CFA0027EEFC /* PrefsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E127E16C23CFA0027EEFC /* PrefsController.m */; };
+		8A3E129516C23CFA0027EEFC /* SequenceCombination.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E128116C23CFA0027EEFC /* SequenceCombination.m */; };
+		8A3E129616C23CFA0027EEFC /* SetupInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E128416C23CFA0027EEFC /* SetupInfo.m */; };
+		8A3E129716C23CFA0027EEFC /* Stimage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E128716C23CFA0027EEFC /* Stimage.m */; };
+		8A3E129816C23CFA0027EEFC /* StimageSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E128A16C23CFA0027EEFC /* StimageSequence.m */; };
+		8A3E129916C23CFA0027EEFC /* StimulusStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E128D16C23CFA0027EEFC /* StimulusStepper.m */; };
+		8A3E129A16C23CFA0027EEFC /* SweepOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E129016C23CFA0027EEFC /* SweepOperations.m */; };
+		8A3E12A016C241840027EEFC /* AbsoluteTimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E129E16C241840027EEFC /* AbsoluteTimeUtils.m */; };
+		8A3E12C516C241DD0027EEFC /* NIDAQX.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E12BB16C241DD0027EEFC /* NIDAQX.m */; };
+		8A3E12E716C242290027EEFC /* EDGSerial.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E12DE16C242290027EEFC /* EDGSerial.m */; };
+		8A3E12F916C242510027EEFC /* Camera2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E12ED16C242510027EEFC /* Camera2.m */; };
+		8A3E131C16C242700027EEFC /* Oscilloscope3.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E131316C242700027EEFC /* Oscilloscope3.m */; };
+		8A3E132516C2428F0027EEFC /* Oscilloscope2OGL.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E132316C2428F0027EEFC /* Oscilloscope2OGL.mm */; };
+		8A3E132716C24BF90027EEFC /* nidaqmxbase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3E132616C24BF90027EEFC /* nidaqmxbase.framework */; };
+		8A3E132916C24DBE0027EEFC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3E132816C24DBE0027EEFC /* OpenGL.framework */; };
+		8A3E132B16C24DC50027EEFC /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3E132A16C24DC50027EEFC /* QTKit.framework */; };
+		8A3E132D16C24E200027EEFC /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A3E132C16C24E200027EEFC /* CoreVideo.framework */; };
+		8A3E132F16C24EA60027EEFC /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8A3E132E16C24EA60027EEFC /* icon.icns */; };
+		8A4931A816DB31100054F793 /* Interrupt1kHz.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4931A716DB31100054F793 /* Interrupt1kHz.m */; };
+		8A784B2216C23BC3005EBA50 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A784B2116C23BC3005EBA50 /* Cocoa.framework */; };
+		8A784B2C16C23BC3005EBA50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A784B2A16C23BC3005EBA50 /* InfoPlist.strings */; };
+		8A784B2E16C23BC3005EBA50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A784B2D16C23BC3005EBA50 /* main.m */; };
+		8A784B3216C23BC3005EBA50 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8A784B3016C23BC3005EBA50 /* Credits.rtf */; };
+		8A784B3516C23BC3005EBA50 /* EPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A784B3416C23BC3005EBA50 /* EPAppDelegate.m */; };
+		8A784B3816C23BC3005EBA50 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A784B3616C23BC3005EBA50 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8A3E127016C23CBB0027EEFC /* MiscSingletons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscSingletons.h; sourceTree = "<group>"; };
+		8A3E127116C23CBB0027EEFC /* MiscSingletons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiscSingletons.m; sourceTree = "<group>"; };
+		8A3E127316C23CDC0027EEFC /* edgKeyConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = edgKeyConstants.h; sourceTree = "<group>"; };
+		8A3E127616C23CFA0027EEFC /* GLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLString.h; sourceTree = "<group>"; };
+		8A3E127716C23CFA0027EEFC /* GLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLString.m; sourceTree = "<group>"; };
+		8A3E127816C23CFA0027EEFC /* OGLTargetEcho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGLTargetEcho.h; sourceTree = "<group>"; };
+		8A3E127916C23CFA0027EEFC /* OGLTargetEcho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGLTargetEcho.m; sourceTree = "<group>"; };
+		8A3E127A16C23CFA0027EEFC /* OGLTargetMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGLTargetMain.h; sourceTree = "<group>"; };
+		8A3E127B16C23CFA0027EEFC /* OGLTargetMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGLTargetMain.m; sourceTree = "<group>"; };
+		8A3E127D16C23CFA0027EEFC /* PrefsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefsController.h; sourceTree = "<group>"; };
+		8A3E127E16C23CFA0027EEFC /* PrefsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefsController.m; sourceTree = "<group>"; };
+		8A3E128016C23CFA0027EEFC /* SequenceCombination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequenceCombination.h; sourceTree = "<group>"; };
+		8A3E128116C23CFA0027EEFC /* SequenceCombination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SequenceCombination.m; sourceTree = "<group>"; };
+		8A3E128316C23CFA0027EEFC /* SetupInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupInfo.h; sourceTree = "<group>"; };
+		8A3E128416C23CFA0027EEFC /* SetupInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupInfo.m; sourceTree = "<group>"; };
+		8A3E128616C23CFA0027EEFC /* Stimage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stimage.h; sourceTree = "<group>"; };
+		8A3E128716C23CFA0027EEFC /* Stimage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stimage.m; sourceTree = "<group>"; };
+		8A3E128916C23CFA0027EEFC /* StimageSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StimageSequence.h; sourceTree = "<group>"; };
+		8A3E128A16C23CFA0027EEFC /* StimageSequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StimageSequence.m; sourceTree = "<group>"; };
+		8A3E128C16C23CFA0027EEFC /* StimulusStepper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StimulusStepper.h; sourceTree = "<group>"; };
+		8A3E128D16C23CFA0027EEFC /* StimulusStepper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StimulusStepper.m; sourceTree = "<group>"; };
+		8A3E128F16C23CFA0027EEFC /* SweepOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SweepOperations.h; sourceTree = "<group>"; };
+		8A3E129016C23CFA0027EEFC /* SweepOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SweepOperations.m; sourceTree = "<group>"; };
+		8A3E129B16C23D1B0027EEFC /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
+		8A3E129D16C241840027EEFC /* AbsoluteTimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbsoluteTimeUtils.h; sourceTree = "<group>"; };
+		8A3E129E16C241840027EEFC /* AbsoluteTimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbsoluteTimeUtils.m; sourceTree = "<group>"; };
+		8A3E12B916C241DD0027EEFC /* NIDAQmxBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIDAQmxBase.h; sourceTree = "<group>"; };
+		8A3E12BA16C241DD0027EEFC /* NIDAQX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIDAQX.h; sourceTree = "<group>"; };
+		8A3E12BB16C241DD0027EEFC /* NIDAQX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIDAQX.m; sourceTree = "<group>"; };
+		8A3E12DD16C242290027EEFC /* EDGSerial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDGSerial.h; sourceTree = "<group>"; };
+		8A3E12DE16C242290027EEFC /* EDGSerial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDGSerial.m; sourceTree = "<group>"; };
+		8A3E12EC16C242510027EEFC /* Camera2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera2.h; sourceTree = "<group>"; };
+		8A3E12ED16C242510027EEFC /* Camera2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera2.m; sourceTree = "<group>"; };
+		8A3E131216C242700027EEFC /* Oscilloscope3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oscilloscope3.h; sourceTree = "<group>"; };
+		8A3E131316C242700027EEFC /* Oscilloscope3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Oscilloscope3.m; sourceTree = "<group>"; };
+		8A3E132216C2428F0027EEFC /* Oscilloscope2OGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oscilloscope2OGL.h; sourceTree = "<group>"; };
+		8A3E132316C2428F0027EEFC /* Oscilloscope2OGL.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Oscilloscope2OGL.mm; sourceTree = "<group>"; };
+		8A3E132616C24BF90027EEFC /* nidaqmxbase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = nidaqmxbase.framework; path = ../../../../../../../Library/Frameworks/nidaqmxbase.framework; sourceTree = "<group>"; };
+		8A3E132816C24DBE0027EEFC /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = ../../../../../../../System/Library/Frameworks/OpenGL.framework; sourceTree = "<group>"; };
+		8A3E132A16C24DC50027EEFC /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = ../../../../../../../System/Library/Frameworks/QTKit.framework; sourceTree = "<group>"; };
+		8A3E132C16C24E200027EEFC /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = ../../../../../../../System/Library/Frameworks/CoreVideo.framework; sourceTree = "<group>"; };
+		8A3E132E16C24EA60027EEFC /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = Resources/icon.icns; sourceTree = "<group>"; };
+		8A4931A616DB31100054F793 /* Interrupt1kHz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interrupt1kHz.h; sourceTree = "<group>"; };
+		8A4931A716DB31100054F793 /* Interrupt1kHz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Interrupt1kHz.m; sourceTree = "<group>"; };
+		8A784B1E16C23BC3005EBA50 /* EP2013.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EP2013.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A784B2116C23BC3005EBA50 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8A784B2416C23BC3005EBA50 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8A784B2516C23BC3005EBA50 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8A784B2616C23BC3005EBA50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8A784B2916C23BC3005EBA50 /* EP2013-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EP2013-Info.plist"; sourceTree = "<group>"; };
+		8A784B2B16C23BC3005EBA50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8A784B2D16C23BC3005EBA50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8A784B2F16C23BC3005EBA50 /* EP2013-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EP2013-Prefix.pch"; sourceTree = "<group>"; };
+		8A784B3116C23BC3005EBA50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		8A784B3316C23BC3005EBA50 /* EPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPAppDelegate.h; sourceTree = "<group>"; };
+		8A784B3416C23BC3005EBA50 /* EPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPAppDelegate.m; sourceTree = "<group>"; };
+		8A784B3716C23BC3005EBA50 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A784B1B16C23BC3005EBA50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A784B2216C23BC3005EBA50 /* Cocoa.framework in Frameworks */,
+				8A3E132716C24BF90027EEFC /* nidaqmxbase.framework in Frameworks */,
+				8A3E132916C24DBE0027EEFC /* OpenGL.framework in Frameworks */,
+				8A3E132B16C24DC50027EEFC /* QTKit.framework in Frameworks */,
+				8A3E132D16C24E200027EEFC /* CoreVideo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A3E126F16C23CBB0027EEFC /* MiscSingletons */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E127016C23CBB0027EEFC /* MiscSingletons.h */,
+				8A3E127116C23CBB0027EEFC /* MiscSingletons.m */,
+			);
+			path = MiscSingletons;
+			sourceTree = "<group>";
+		};
+		8A3E127416C23CFA0027EEFC /* OGLTargets */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E127616C23CFA0027EEFC /* GLString.h */,
+				8A3E127716C23CFA0027EEFC /* GLString.m */,
+				8A3E127816C23CFA0027EEFC /* OGLTargetEcho.h */,
+				8A3E127916C23CFA0027EEFC /* OGLTargetEcho.m */,
+				8A3E127A16C23CFA0027EEFC /* OGLTargetMain.h */,
+				8A3E127B16C23CFA0027EEFC /* OGLTargetMain.m */,
+			);
+			path = OGLTargets;
+			sourceTree = "<group>";
+		};
+		8A3E127C16C23CFA0027EEFC /* PrefsController */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E127D16C23CFA0027EEFC /* PrefsController.h */,
+				8A3E127E16C23CFA0027EEFC /* PrefsController.m */,
+			);
+			path = PrefsController;
+			sourceTree = "<group>";
+		};
+		8A3E127F16C23CFA0027EEFC /* SequenceCombination */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E128016C23CFA0027EEFC /* SequenceCombination.h */,
+				8A3E128116C23CFA0027EEFC /* SequenceCombination.m */,
+			);
+			path = SequenceCombination;
+			sourceTree = "<group>";
+		};
+		8A3E128216C23CFA0027EEFC /* SetupInfo */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E128316C23CFA0027EEFC /* SetupInfo.h */,
+				8A3E128416C23CFA0027EEFC /* SetupInfo.m */,
+			);
+			path = SetupInfo;
+			sourceTree = "<group>";
+		};
+		8A3E128516C23CFA0027EEFC /* Stimage */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E128616C23CFA0027EEFC /* Stimage.h */,
+				8A3E128716C23CFA0027EEFC /* Stimage.m */,
+			);
+			path = Stimage;
+			sourceTree = "<group>";
+		};
+		8A3E128816C23CFA0027EEFC /* StimageSequence */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E128916C23CFA0027EEFC /* StimageSequence.h */,
+				8A3E128A16C23CFA0027EEFC /* StimageSequence.m */,
+			);
+			path = StimageSequence;
+			sourceTree = "<group>";
+		};
+		8A3E128B16C23CFA0027EEFC /* StimulusStepper */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E128C16C23CFA0027EEFC /* StimulusStepper.h */,
+				8A3E128D16C23CFA0027EEFC /* StimulusStepper.m */,
+			);
+			path = StimulusStepper;
+			sourceTree = "<group>";
+		};
+		8A3E128E16C23CFA0027EEFC /* SweepOperations */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E128F16C23CFA0027EEFC /* SweepOperations.h */,
+				8A3E129016C23CFA0027EEFC /* SweepOperations.m */,
+			);
+			path = SweepOperations;
+			sourceTree = "<group>";
+		};
+		8A3E129C16C241840027EEFC /* AbsoluteTimeUtils */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E129D16C241840027EEFC /* AbsoluteTimeUtils.h */,
+				8A3E129E16C241840027EEFC /* AbsoluteTimeUtils.m */,
+			);
+			name = AbsoluteTimeUtils;
+			path = ../../objectiveC_Library/AbsoluteTimeUtils;
+			sourceTree = "<group>";
+		};
+		8A3E12A616C241DD0027EEFC /* NIDAQ */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E12B916C241DD0027EEFC /* NIDAQmxBase.h */,
+				8A3E12BA16C241DD0027EEFC /* NIDAQX.h */,
+				8A3E12BB16C241DD0027EEFC /* NIDAQX.m */,
+			);
+			name = NIDAQ;
+			path = ../../objectiveC_Library/NIDAQ;
+			sourceTree = "<group>";
+		};
+		8A3E12CA16C242290027EEFC /* EDGSerial */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E12DD16C242290027EEFC /* EDGSerial.h */,
+				8A3E12DE16C242290027EEFC /* EDGSerial.m */,
+			);
+			name = EDGSerial;
+			path = ../../objectiveC_Library/EDGSerial;
+			sourceTree = "<group>";
+		};
+		8A3E12EB16C242510027EEFC /* Camera2 */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E12EC16C242510027EEFC /* Camera2.h */,
+				8A3E12ED16C242510027EEFC /* Camera2.m */,
+			);
+			name = Camera2;
+			path = ../../objectiveC_Library/Camera2;
+			sourceTree = "<group>";
+		};
+		8A3E12FF16C242700027EEFC /* Oscilloscope3 */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E131216C242700027EEFC /* Oscilloscope3.h */,
+				8A3E131316C242700027EEFC /* Oscilloscope3.m */,
+			);
+			name = Oscilloscope3;
+			path = ../../objectiveC_Library/Oscilloscope3;
+			sourceTree = "<group>";
+		};
+		8A3E132016C2428F0027EEFC /* Oscilloscope2OGL */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E132216C2428F0027EEFC /* Oscilloscope2OGL.h */,
+				8A3E132316C2428F0027EEFC /* Oscilloscope2OGL.mm */,
+			);
+			name = Oscilloscope2OGL;
+			path = ../../objectiveC_Library/Oscilloscope2OGL;
+			sourceTree = "<group>";
+		};
+		8A4931A516DB31100054F793 /* Interrupt1kHz */ = {
+			isa = PBXGroup;
+			children = (
+				8A4931A616DB31100054F793 /* Interrupt1kHz.h */,
+				8A4931A716DB31100054F793 /* Interrupt1kHz.m */,
+			);
+			path = Interrupt1kHz;
+			sourceTree = "<group>";
+		};
+		8A784B1516C23BC3005EBA50 = {
+			isa = PBXGroup;
+			children = (
+				8A784B2716C23BC3005EBA50 /* EP2013 */,
+				8A784B2016C23BC3005EBA50 /* Frameworks */,
+				8A784B1F16C23BC3005EBA50 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A784B1F16C23BC3005EBA50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A784B1E16C23BC3005EBA50 /* EP2013.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A784B2016C23BC3005EBA50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A784B2116C23BC3005EBA50 /* Cocoa.framework */,
+				8A784B2316C23BC3005EBA50 /* Other Frameworks */,
+				8A3E132616C24BF90027EEFC /* nidaqmxbase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A784B2316C23BC3005EBA50 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A784B2416C23BC3005EBA50 /* AppKit.framework */,
+				8A784B2516C23BC3005EBA50 /* CoreData.framework */,
+				8A784B2616C23BC3005EBA50 /* Foundation.framework */,
+				8A3E132816C24DBE0027EEFC /* OpenGL.framework */,
+				8A3E132A16C24DC50027EEFC /* QTKit.framework */,
+				8A3E132C16C24E200027EEFC /* CoreVideo.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8A784B2716C23BC3005EBA50 /* EP2013 */ = {
+			isa = PBXGroup;
+			children = (
+				8A3E127316C23CDC0027EEFC /* edgKeyConstants.h */,
+				8A3E129B16C23D1B0027EEFC /* Globals.h */,
+				8A3E129C16C241840027EEFC /* AbsoluteTimeUtils */,
+				8A3E12CA16C242290027EEFC /* EDGSerial */,
+				8A3E12A616C241DD0027EEFC /* NIDAQ */,
+				8A3E12EB16C242510027EEFC /* Camera2 */,
+				8A3E132016C2428F0027EEFC /* Oscilloscope2OGL */,
+				8A3E12FF16C242700027EEFC /* Oscilloscope3 */,
+				8A4931A516DB31100054F793 /* Interrupt1kHz */,
+				8A3E126F16C23CBB0027EEFC /* MiscSingletons */,
+				8A3E127C16C23CFA0027EEFC /* PrefsController */,
+				8A3E127416C23CFA0027EEFC /* OGLTargets */,
+				8A3E127F16C23CFA0027EEFC /* SequenceCombination */,
+				8A3E128216C23CFA0027EEFC /* SetupInfo */,
+				8A3E128E16C23CFA0027EEFC /* SweepOperations */,
+				8A3E128516C23CFA0027EEFC /* Stimage */,
+				8A3E128816C23CFA0027EEFC /* StimageSequence */,
+				8A3E128B16C23CFA0027EEFC /* StimulusStepper */,
+				8A784B3316C23BC3005EBA50 /* EPAppDelegate.h */,
+				8A784B3416C23BC3005EBA50 /* EPAppDelegate.m */,
+				8A784B3616C23BC3005EBA50 /* MainMenu.xib */,
+				8A784B2816C23BC3005EBA50 /* Supporting Files */,
+			);
+			path = EP2013;
+			sourceTree = "<group>";
+		};
+		8A784B2816C23BC3005EBA50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A784B2916C23BC3005EBA50 /* EP2013-Info.plist */,
+				8A784B2A16C23BC3005EBA50 /* InfoPlist.strings */,
+				8A784B2D16C23BC3005EBA50 /* main.m */,
+				8A784B2F16C23BC3005EBA50 /* EP2013-Prefix.pch */,
+				8A784B3016C23BC3005EBA50 /* Credits.rtf */,
+				8A3E132E16C24EA60027EEFC /* icon.icns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A784B1D16C23BC3005EBA50 /* EP2013 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A784B3B16C23BC3005EBA50 /* Build configuration list for PBXNativeTarget "EP2013" */;
+			buildPhases = (
+				8A784B1A16C23BC3005EBA50 /* Sources */,
+				8A784B1B16C23BC3005EBA50 /* Frameworks */,
+				8A784B1C16C23BC3005EBA50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EP2013;
+			productName = EP2013;
+			productReference = 8A784B1E16C23BC3005EBA50 /* EP2013.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A784B1616C23BC3005EBA50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = EP;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = bach;
+			};
+			buildConfigurationList = 8A784B1916C23BC3005EBA50 /* Build configuration list for PBXProject "EP2013" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8A784B1516C23BC3005EBA50;
+			productRefGroup = 8A784B1F16C23BC3005EBA50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A784B1D16C23BC3005EBA50 /* EP2013 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A784B1C16C23BC3005EBA50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A784B2C16C23BC3005EBA50 /* InfoPlist.strings in Resources */,
+				8A784B3216C23BC3005EBA50 /* Credits.rtf in Resources */,
+				8A784B3816C23BC3005EBA50 /* MainMenu.xib in Resources */,
+				8A3E132F16C24EA60027EEFC /* icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A784B1A16C23BC3005EBA50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A784B2E16C23BC3005EBA50 /* main.m in Sources */,
+				8A784B3516C23BC3005EBA50 /* EPAppDelegate.m in Sources */,
+				8A3E127216C23CBB0027EEFC /* MiscSingletons.m in Sources */,
+				8A3E129116C23CFA0027EEFC /* GLString.m in Sources */,
+				8A3E129216C23CFA0027EEFC /* OGLTargetEcho.m in Sources */,
+				8A3E129316C23CFA0027EEFC /* OGLTargetMain.m in Sources */,
+				8A3E129416C23CFA0027EEFC /* PrefsController.m in Sources */,
+				8A3E129516C23CFA0027EEFC /* SequenceCombination.m in Sources */,
+				8A3E129616C23CFA0027EEFC /* SetupInfo.m in Sources */,
+				8A3E129716C23CFA0027EEFC /* Stimage.m in Sources */,
+				8A3E129816C23CFA0027EEFC /* StimageSequence.m in Sources */,
+				8A3E129916C23CFA0027EEFC /* StimulusStepper.m in Sources */,
+				8A3E129A16C23CFA0027EEFC /* SweepOperations.m in Sources */,
+				8A3E12A016C241840027EEFC /* AbsoluteTimeUtils.m in Sources */,
+				8A3E12C516C241DD0027EEFC /* NIDAQX.m in Sources */,
+				8A3E12E716C242290027EEFC /* EDGSerial.m in Sources */,
+				8A3E12F916C242510027EEFC /* Camera2.m in Sources */,
+				8A3E131C16C242700027EEFC /* Oscilloscope3.m in Sources */,
+				8A3E132516C2428F0027EEFC /* Oscilloscope2OGL.mm in Sources */,
+				8A4931A816DB31100054F793 /* Interrupt1kHz.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8A784B2A16C23BC3005EBA50 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A784B2B16C23BC3005EBA50 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8A784B3016C23BC3005EBA50 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A784B3116C23BC3005EBA50 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		8A784B3616C23BC3005EBA50 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A784B3716C23BC3005EBA50 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A784B3916C23BC3005EBA50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.8;
+			};
+			name = Debug;
+		};
+		8A784B3A16C23BC3005EBA50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.8;
+			};
+			name = Release;
+		};
+		8A784B3C16C23BC3005EBA50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EP2013/EP2013-Prefix.pch";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				INFOPLIST_FILE = "EP2013/EP2013-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8A784B3D16C23BC3005EBA50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EP2013/EP2013-Prefix.pch";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				INFOPLIST_FILE = "EP2013/EP2013-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A784B1916C23BC3005EBA50 /* Build configuration list for PBXProject "EP2013" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A784B3916C23BC3005EBA50 /* Debug */,
+				8A784B3A16C23BC3005EBA50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A784B3B16C23BC3005EBA50 /* Build configuration list for PBXNativeTarget "EP2013" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A784B3C16C23BC3005EBA50 /* Debug */,
+				8A784B3D16C23BC3005EBA50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A784B1616C23BC3005EBA50 /* Project object */;
+}
