@@ -270,6 +270,8 @@ static NSWindow *stimScreenWindow;
 }
 
 
+// TEST CHANGE, just checking on github
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {	NSLog(@"%s", __PRETTY_FUNCTION__);	// this is always after "awakeFromNib"
 #pragma unused (aNotification)
 	timerGCDOsci = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0));
